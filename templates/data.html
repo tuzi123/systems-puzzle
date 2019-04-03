@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+      <h1>The items for sale are shown below:</h1>
+      <div>
+        <ol>
+          <p><b>name, quantity, description</b></p>
+          {% for entry in entries %}
+          <li>{{entry.name}}, {{entry.quantity}}, {{entry.description}}</li>
+          {% endfor %}
+        </ol>
+        <a href={{url_for('add_item')}}>Go back to homepage</a>
+      </div>
+    </body>
+</html>
